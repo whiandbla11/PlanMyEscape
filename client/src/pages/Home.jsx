@@ -81,7 +81,7 @@ export default function Home() {
             <span className="text-indigo-200">Escape</span>
           </h1>
 
-          <p className="text-lg sm:text-xl mb-10 max-w-xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] min-h-[3.5rem]" style={{ color: '#CCFF99' }}>
+          <p className="text-lg sm:text-xl mb-10 max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] min-h-[3.5rem]" style={{ color: '#CCFF99' }}>
             {typed}<span className="animate-pulse">|</span>
           </p>
 
