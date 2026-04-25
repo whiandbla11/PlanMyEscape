@@ -28,7 +28,7 @@ export default function Home() {
     e.preventDefault();
     if (!destination.trim()) return toast.error('Please enter a destination');
     const d = parseInt(days);
-    if (!d || d < 2 || d > 7) return toast.error('Please choose between 2 and 7 days');
+    if (!d || d < 2 || d > 14) return toast.error('Please choose between 2 and 14 days');
 
     setLoading(true);
     try {
@@ -90,8 +90,8 @@ export default function Home() {
                   onChange={(e) => setDays(e.target.value)}
                   className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent text-sm appearance-none cursor-pointer"
                 >
-                  <option value="">How many days? (2–7)</option>
-                  {[2, 3, 4, 5, 6, 7].map((d) => (
+                  <option value="">How many days? (2–14)</option>
+                  {[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((d) => (
                     <option key={d} value={d}>
                       {d} days
                     </option>
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-2">
             <Building2 className="w-4 h-4 text-indigo-400" />
-            <span>2–7 day plans</span>
+            <span>2–14 day plans</span>
           </div>
         </div>
       </section>

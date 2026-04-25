@@ -12,8 +12,8 @@ export async function generate(req, res) {
       return res.status(400).json({ error: 'Destination and days are required' });
     }
 
-    if (days < 2 || days > 7) {
-      return res.status(400).json({ error: 'Days must be between 2 and 7' });
+    if (days < 2 || days > 14) {
+      return res.status(400).json({ error: 'Days must be between 2 and 14' });
     }
 
     const [itineraryData, weather, imageUrl] = await Promise.all([

@@ -9,7 +9,10 @@
       "Bash(mongod *)",
       "Bash(lsof -ti:5000)",
       "Bash(xargs kill *)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
