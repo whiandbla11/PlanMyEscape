@@ -54,7 +54,7 @@ export default function Home() {
             alt="Travel background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-indigo-800/75 to-purple-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/50" />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 py-20 text-center">
