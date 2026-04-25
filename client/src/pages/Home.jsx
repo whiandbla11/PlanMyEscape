@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { Search, MapPin, Calendar, Plane, Mountain, Building2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -32,7 +32,7 @@ export default function Home() {
 
     setLoading(true);
     try {
-      const res = await axios.post('/api/itinerary/generate', {
+      const res = await api.post('/itinerary/generate', {
         destination: destination.trim(),
         days: d,
       });

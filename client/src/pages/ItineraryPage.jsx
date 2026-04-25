@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import toast from 'react-hot-toast';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -26,8 +26,8 @@ export default function ItineraryPage() {
 
   useEffect(() => {
     if (!itinerary) {
-      axios
-        .get(`/api/itinerary/share/${shareId}`)
+      api
+        .get(`/itinerary/share/${shareId}`)
         .then((res) => setItinerary(res.data.itinerary))
         .catch(() => toast.error('Itinerary not found'))
         .finally(() => setLoading(false));

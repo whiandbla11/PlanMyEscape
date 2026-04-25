@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { RefreshCw, MapPin, Clock, Utensils, Lightbulb } from 'lucide-react';
-import axios from 'axios';
+import api from '../api';
 import toast from 'react-hot-toast';
 
 const TYPE_BADGE = {
@@ -21,7 +21,7 @@ export default function DayCard({ day, shareId, onRegenerated, isActive, onSelec
     e.stopPropagation();
     setLoading(true);
     try {
-      const res = await axios.post('/api/itinerary/regenerate-day', {
+      const res = await api.post('/itinerary/regenerate-day', {
         shareId,
         dayNumber: day.day,
       });
