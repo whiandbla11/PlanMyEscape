@@ -74,7 +74,7 @@ export default function Home() {
           </p>
 
           {/* Search Form */}
-          <form onSubmit={handleSubmit} className="p-6 max-w-xl mx-auto">
+          <form onSubmit={handleSubmit} className="p-4 max-w-md mx-auto">
             <div className="space-y-4">
               <div className="relative">
                 <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
