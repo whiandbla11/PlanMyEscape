@@ -74,7 +74,7 @@ export default function Home() {
           </p>
 
           {/* Search Form */}
-          <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-6 max-w-xl mx-auto">
+          <form onSubmit={handleSubmit} className="bg-white/20 backdrop-blur-md rounded-2xl shadow-2xl p-6 max-w-xl mx-auto border border-white/30">
             <div className="space-y-4">
               <div className="relative">
                 <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -83,7 +83,7 @@ export default function Home() {
                   value={destination}
                   onChange={(e) => setDestination(e.target.value)}
                   placeholder="Where do you want to go?"
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-800 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent text-sm"
+                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-white/40 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent text-sm"
                 />
               </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
                 <select
                   value={days}
                   onChange={(e) => setDays(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent text-sm appearance-none cursor-pointer"
+                  className="w-full pl-11 pr-4 py-3.5 rounded-xl border border-white/40 bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent text-sm appearance-none cursor-pointer"
                 >
                   <option value="">How many days? (2–14)</option>
                   {[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((d) => (
@@ -127,14 +127,14 @@ export default function Home() {
 
             {/* Suggestions */}
             <div className="mt-4">
-              <p className="text-xs text-slate-400 mb-2 text-left">Popular destinations</p>
+              <p className="text-xs text-white/70 mb-2 text-left">Popular destinations</p>
               <div className="flex flex-wrap gap-1.5">
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s}
                     type="button"
                     onClick={() => setDestination(s)}
-                    className="text-xs px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors border border-slate-200 dark:border-slate-600"
+                    className="text-xs px-2.5 py-1 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors border border-white/30"
                   >
                     {s}
                   </button>
