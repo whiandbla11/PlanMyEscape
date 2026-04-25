@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p server/routes server/models server/controllers server/utils)",
+      "Bash(mkdir -p client)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(mongod *)",
+      "Bash(lsof -ti:5000)",
+      "Bash(xargs kill *)",
+      "Bash(npm uninstall *)"
+    ]
+  }
+}
