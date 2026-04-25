@@ -69,7 +69,7 @@ export default function Home() {
             <span className="text-indigo-200">Escape</span>
           </h1>
 
-          <p className="text-indigo-100 text-lg sm:text-xl mb-10 max-w-xl mx-auto">
+          <p className="text-white text-lg sm:text-xl mb-10 max-w-xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             Enter any destination. Get a detailed day-by-day itinerary crafted just for you in seconds.
           </p>
 
