@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api';
 import { Search, MapPin, Calendar, Plane, Mountain, Building2 } from 'lucide-react';
@@ -23,6 +23,18 @@ export default function Home() {
   const [days, setDays] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const fullText = 'Enter any destination. Get a detailed day-by-day itinerary crafted just for you in seconds.';
+  const [typed, setTyped] = useState('');
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTyped(fullText.slice(0, i + 1));
+      i++;
+      if (i === fullText.length) clearInterval(interval);
+    }, 30);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,8 +81,8 @@ export default function Home() {
             <span className="text-indigo-200">Escape</span>
           </h1>
 
-          <p className="text-white text-lg sm:text-xl mb-10 max-w-xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-            Enter any destination. Get a detailed day-by-day itinerary crafted just for you in seconds.
+          <p className="text-lg sm:text-xl mb-10 max-w-xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] min-h-[3.5rem]" style={{ color: '#CCFF99' }}>
+            {typed}<span className="animate-pulse">|</span>
           </p>
 
           {/* Search Form */}
